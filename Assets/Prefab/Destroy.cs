@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using static UnityEditor.PlayerSettings;
 
 public class Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
+    private bool entered = false;
     private float interval;
     private bool enable = false;
     public GameObject floor;
@@ -15,6 +17,14 @@ public class Destroy : MonoBehaviour
         interval = Random.Range(4.0f, 5.0f);
         Destroy(gameObject,interval);
         Debug.Log(transform.position+" : "+interval);
+    }
+    public void SetVariable()
+    {
+        entered = true;
+    }
+    public bool getVariable()
+    {
+        return entered;
     }
 
     // Update is called once per frame
