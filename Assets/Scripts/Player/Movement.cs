@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody player;
-    private float movespeed = 3f;
+    private float movespeed = 30f;
     private float turnSpeed = 100f;
     void Start()
     {
